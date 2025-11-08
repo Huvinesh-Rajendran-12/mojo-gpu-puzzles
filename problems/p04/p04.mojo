@@ -20,6 +20,8 @@ fn add_10_2d(
     # FILL ME IN (roughly 2 lines)
     if row < size and col < size:
         output[row * size + col] = a[row * size + col] + 10.0
+        # converts 2-D index to 1-D index
+        # let's say there's a 2x2 matrix => [row[0] * size + col[0]] => [0 * 2 + 0] => [0], [1 * 2 + 0] => [2], [0 * 2 + 1] => [1], [1 * 2 + 1] => [3]
 
 
 # ANCHOR_END: add_10_2d
