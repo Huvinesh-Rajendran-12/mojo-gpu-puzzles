@@ -22,7 +22,7 @@ fn add_10_shared(
         TPB,
         Scalar[dtype],
         address_space = AddressSpace.SHARED,
-    ]()
+    ]() # shared memory I assume ?
     global_i = block_dim.x * block_idx.x + thread_idx.x
     local_i = thread_idx.x
     # local data into shared memory
@@ -34,6 +34,8 @@ fn add_10_shared(
     barrier()
 
     # FILL ME IN (roughly 2 lines)
+    shared[local_i] += 10
+    output[global_i] = shared[local_i]
 
 
 # ANCHOR_END: add_10_shared
