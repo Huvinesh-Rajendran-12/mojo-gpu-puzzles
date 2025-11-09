@@ -30,12 +30,13 @@ system-requirements = { macos = "15.0" }
 
 [dependencies]
 python = "==3.12"
-mojo = ">=0.25.7.0.dev2025110705,<0.26" # includes `mojo-compiler`, lsp, debugger, formatter etc.
+mojo = "==0.25.6.0" # includes `mojo-compiler`, lsp, debugger, formatter etc.
 max = "*"
 bash = ">=5.2.21,<6"
 manim = ">=0.18.1,<0.19"
 mdbook = ">=0.4.48,<0.5"
 pre-commit = ">=4.2.0,<5"
+modular = "==25.6"
 
 [environments]
 nvidia = { features = ["nvidia"], solve-group = "nvidia" }
